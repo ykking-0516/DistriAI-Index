@@ -71,6 +71,7 @@ type DatasetListResponse struct {
 	PageResp
 }
 
+// DatasetList handles the request to list datasets with various filtering and sorting options.
 func DatasetList(context *gin.Context) {
 	var req DatasetListReq
 	if err := context.ShouldBindBodyWith(&req, binding.JSON); err != nil {
